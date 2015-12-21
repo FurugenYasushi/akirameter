@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update]
+  before_action :set_user, only: [:show,:edit, :update]
+  before_action :correct_user, only: [:show,:edit, :update]
+  
   def show # 追加
    @user = User.find(params[:id])
   end
@@ -8,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
-    def create
+  def create
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to the Sample App!"
@@ -16,10 +18,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-    end
+  end
 
   def edit
-
+  
   end
   
   def update
@@ -27,11 +29,10 @@ class UsersController < ApplicationController
       # 保存に成功した場合はトップページへリダイレクト
       redirect_to @user, notice: 'メッセージを編集しました'
       else
-      # 保存に失敗した場合は編集画面へ戻す　 root_path 
+      # 保存に失敗した場合は編集画面へ戻す
       render 'edit'
     end
   end
-
 
   private
 
@@ -42,6 +43,11 @@ class UsersController < ApplicationController
   
   def set_user
     @user = User.find(params[:id])
+  end
+  
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless @user == current_user
   end
   
 end
