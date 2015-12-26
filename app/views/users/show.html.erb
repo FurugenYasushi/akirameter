@@ -5,8 +5,13 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+        <%= @user.bio %><BR>
+        <%= @user.area %>
+       <%= render 'stats' %>
+
     </section>
   </aside>
+ 
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
