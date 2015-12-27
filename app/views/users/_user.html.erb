@@ -1,4 +1,4 @@
 <div class="col-md-4">
-    <div class="follow"><%= gravatar_for user %></div><BR>
+    <div class="follow"><%= link_to gravatar_for(user, size: 100), user %></div><BR>
     <div class="follow"><%= user.name %></div><BR>
 </div>

@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show,:edit, :update]
+  before_action :set_user, only: [:show,:edit,:update,:home]
   before_action :correct_user, only: [:edit, :update]
   
   def show 
-   @user = User.find(params[:id])
-   @microposts = @user.microposts.order(created_at: :desc)
+  @user = User.find(params[:id])
+  @microposts = @user.microposts.order(created_at: :desc)
+                .paginate(page: params[:page], per_page: 10)
   end
-
+  
   def followings
     @title = "Followings"
     @user  = User.find(params[:id])
@@ -37,6 +38,9 @@ class UsersController < ApplicationController
 
   def edit
   
+  end
+  
+  def home
   end
   
   def update
