@@ -5,7 +5,7 @@
 
 body {
   padding-top: 60px;
-  background-image: image-url("media-20160126-2.jpg");
+  background-image: image-url("media-20160126-3.jpg");
   background-color: #000000;
   background-position: top center;
   background-size: contain;
@@ -235,4 +235,10 @@ span.picture {
   border-radius: 10px;
   color: #000000; 
   padding: 5px;
+}
+
+.data-label{
+  font-size: 12px;
+  color: #fff; 
+
 }
