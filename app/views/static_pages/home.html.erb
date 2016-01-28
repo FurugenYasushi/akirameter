@@ -17,7 +17,7 @@
 <% else %>
 
 <div class="row">
- <div class="col-md-6 col-md-offset-3">
+ <div class="col-md-8 col-md-offset-2">
   <div class="center">
     <h1>A★Kirameter</h1>
     <h3>〜アキラメをキラメキ★に〜</h3>
@@ -32,8 +32,8 @@
     <div class="akirame-tweets">
       <p class="btn-sm btn-info">new_Akirame</p>
     <% @micropost_all.each do |m| %>
-<div class="field content"><%= m.content %>,</div>
-<div class="field content"><%= m.seibetsu %>,</div>
+<div class="field_content"><%= m.content %>,</div>
+<div class="field_content"><%= m.seibetsu %>,</div>
 [posted] <%= m.created_at %><br />
 <hr />
 <% end %>
