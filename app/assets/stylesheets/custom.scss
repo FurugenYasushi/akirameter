@@ -5,6 +5,12 @@
 
 body {
   padding-top: 60px;
+  background-image: image-url("media-20160126-2.jpg");
+  background-color: #000000;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment:fixed;  
 }
 
 section {
@@ -36,9 +42,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
+  color: #fff;
 }
 
 h2 {
@@ -47,7 +54,16 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
 }
 
 p {
@@ -201,3 +217,22 @@ span.picture {
   clear: left;
 }
 
+/*akirame-tweets*/
+.akirame-tweets{
+  background-color: rgba( 255, 255, 255, 0.65 ); 
+  border-radius: 20px;
+  color: #000000; 
+  padding: 20px;
+}
+
+#akirameter{
+  font-size: 45px;
+  color: #fff; 
+}
+
+.akirame-tweets-form{
+  background-color: rgba( 255, 255, 255, 0.65 ); 
+  border-radius: 10px;
+  color: #000000; 
+  padding: 5px;
+}

@@ -15,9 +15,32 @@
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to the Microposts</h1>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="row">
+ <div class="col-md-6 col-md-offset-3">
+  <div class="center">
+    <h1>A★Kirameter</h1>
+    <h3>〜アキラメをキラメキ★に〜</h3>
+    <BR>
+      <p>all_Akirame</p>
+      <span id="akirameter">
+      <%= pluralize(Micropost.count, "") %>
+      </span>
+      <br>
+       <%= link_to "アキラメル！", new_micropost_path, class: "btn btn-lg btn-default" %>
+      <BR><BR>
+        
+    <div class="akirame-tweets">
+      <p class="btn-sm btn-info">new_Akirame</p>
+    <% @micropost_all.each do |m| %>
+<div class="field content"><%= m.content %>,</div>
+<div class="field content"><%= m.seibetsu %>,</div>
+[posted] <%= m.created_at %><br />
+<hr />
+<% end %>
+    </div>
+    <%= link_to "Sign up now!", microposts_path, class: "btn btn-lg btn-primary" %>
   </div>
+</div>
+</div>
 <% end %>

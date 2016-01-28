@@ -1,13 +1,20 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create]
+#  before_action :logged_in_user, only: [:create]
 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
+        if logged_in?
+       @micropost = current_user.microposts.build(micropost_params)
+        else
+          @micropost = Micropost.new(micropost_params)
+        end
+    
+    
     if @micropost.save
-      flash[:success] = "Micropost created!"
+      flash[:success] = "アキラメ完了！!"
       redirect_to root_url
     else
-      @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
+      #@feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
+      @micropost_all = Micropost.all.order(created_at: :desc)
       render 'static_pages/home'
     end
   end
@@ -20,8 +27,12 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
   
+  def new
+  @micropost = Micropost.new
+  end
+  
   private
   def micropost_params
-    params.require(:micropost).permit(:content)
+    params.require(:micropost).permit(:content,:seibetsu,:age,:past_time)
   end
 end

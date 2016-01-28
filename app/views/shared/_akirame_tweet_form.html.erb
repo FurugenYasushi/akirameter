@@ -1,0 +1,10 @@
+<%= form_for(@micropost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="contents">
+    <%= f.text_area :content,class: 'akirame-tweets-form' ,placeholder: "そろそろアキラメますか" %>
+    <%= f.text_area :seibetsu,class: 'akirame-tweets-form' , placeholder: "性別<任意>" %>
+    <%= f.text_area :age,class: 'akirame-tweets-form' , placeholder: "年代<任意>" %>
+    <%= f.text_area :past_time,class: 'akirame-tweets-form' , placeholder: "費やした時間<任意>" %>
+  </div>
+  <%= f.submit "アキラメる！", class: "btn btn-primary" %>
+<% end %>
