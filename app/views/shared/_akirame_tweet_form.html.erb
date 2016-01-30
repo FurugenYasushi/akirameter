@@ -1,10 +1,25 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="contents">
-    <%= f.text_area :content,class: 'akirame-tweets-form' ,placeholder: "そろそろアキラメますか" %>
-    <%= f.text_area :seibetsu,class: 'akirame-tweets-form' , placeholder: "性別<任意>" %>
-    <%= f.text_area :age,class: 'akirame-tweets-form' , placeholder: "年代<任意>" %>
-    <%= f.text_area :past_time,class: 'akirame-tweets-form' , placeholder: "費やした時間<任意>" %>
+  <div class="animsition">
+    <span class="tweet-label">アキラメたい事</span>
+    <%= f.text_area :content,class: 'akirame-tweets-form' ,placeholder: "1000文字以内" %>
+    
+    <label class="radio-inline tweet-label">
+    <%= f.radio_button :seibetsu,"男",class:'',id:"inlineRadio1" %>　男
+    </label>
+    <label class="radio-inline tweet-label">
+    <%= f.radio_button :seibetsu,"女",class:'',id:"inlineRadio2" %>　女
+    </label>
+    <br>
+    <br>
+    <% options = ["","10代","20代","30代","40代","50代","60代","70代","80代","90代","100歳以上"] %>
+    <span class="tweet-label">年代</span>
+    <%= f.select :age, options ,class: 'akirame-tweets-form' %>
+    <% options = ["","1日","1ヶ月","3ヶ月","6ヶ月","1年","2年","3年","4年","5年","6年","7年","8年","9年","10年","10年以上","15年以上","20年以上"] %>
+    <span class="tweet-label">費やした時間</span><%= f.select :past_time, options ,class: 'akirame-tweets-form' %>
   </div>
+  <br>
+  <div  class="">
   <%= f.submit "アキラメる！", class: "btn btn-primary" %>
+  </div>
 <% end %>

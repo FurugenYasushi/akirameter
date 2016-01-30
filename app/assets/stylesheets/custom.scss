@@ -5,12 +5,13 @@
 
 body {
   padding-top: 60px;
-  background-image: image-url("media-20160126-3.jpg");
+  background-image: image-url("ocean1.jpg");
   background-color: #000000;
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-attachment:fixed;  
+  background-attachment:fixed;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Verdana,'ＭＳ Ｐゴシック','sans-serif';
 }
 
 section {
@@ -219,10 +220,11 @@ span.picture {
 
 /*akirame-tweets*/
 .akirame-tweets{
-  background-color: rgba( 255, 255, 255, 0.65 ); 
-  border-radius: 20px;
+  background-color: rgba( 255, 255, 255, 0.85); 
+  border-radius: 10px;
   color: #000000; 
   padding: 20px;
+  font-size: 14px;
 }
 
 #akirameter{
@@ -231,10 +233,14 @@ span.picture {
 }
 
 .akirame-tweets-form{
-  background-color: rgba( 255, 255, 255, 0.75 ); 
+  background-color: rgba( 255, 255, 255, 1 ); 
   border-radius: 10px;
   color: #000000; 
   padding: 5px 0px 0px 15px;
+}
+
+.akirame-timeline{
+  font-size: 20px;
 }
 
 .data-label{
@@ -246,4 +252,9 @@ span.picture {
 .field_content{
   text-align: left;
   padding: 0px 0px 0px 15px;
+  font-size: 12px;
+}
+
+.tweet-label{
+  color: #f5fffa; 
 }

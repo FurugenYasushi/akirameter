@@ -21,24 +21,31 @@
   <div class="center">
     <h1>A★Kirameter</h1>
     <h3>〜アキラメをキラメキ★に〜</h3>
-      <span class="data-label">Akirame.ALL</span><br>
-      <span id="akirameter">
+    <span class="data-label">Akirame.ALL</span><br>
+    <span id="akirameter">
       <%= pluralize(Micropost.count, "") %>
-      </span>
-      <br>
-       <%= link_to "アキラメル！", new_micropost_path, class: "btn btn-lg btn-default" %>
-      <BR><BR>
+    </span>
+    <br>
+      <%= link_to "アキラメル！", new_micropost_path, class: "btn btn-lg btn-default" %>
+    <BR>
+    <BR>
         
     <div class="akirame-tweets">
       <p class="btn-sm btn-info">new_Akirame</p>
-    <% @micropost_all.each do |m| %>
-<div class="field_content"><%= m.content %>,</div>
-<div class="field_content"><%= m.seibetsu %>,</div>
-[posted] <%= m.created_at %><br />
-<hr />
-<% end %>
-    </div>
-    <%= link_to "Sign up now!", microposts_path, class: "btn btn-lg btn-primary" %>
+    　　<% @micropost_all.each do |m| %>
+　　　　　<div class="field_content">
+　　　　　  <p class="akirame-timeline"><%= m.content %></p>
+            性別：<%= m.seibetsu %>
+　　　　　  年代：<%= m.age %>
+　　　　　  費やした時間：<%= m.past_time %>
+　　　　　  <%= m.created_at %>
+　　　　　</div>
+　　　　　<hr/>
+　　　　<% end %>
+  　</div>
+  　<BR>
+  　<BR>
+    <%= link_to "Sign up now!", microposts_path, class: "btn btn-md btn-primary" %>
   </div>
 </div>
 </div>

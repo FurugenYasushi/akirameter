@@ -10,7 +10,8 @@ class MicropostsController < ApplicationController
     
     
     if @micropost.save
-      flash[:success] = "アキラメ完了！!"
+      #render 'static_pages/done'
+      flash[:success] = "お疲れ様でした！!"
       redirect_to root_url
     else
       #@feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
