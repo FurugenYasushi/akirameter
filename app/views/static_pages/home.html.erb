@@ -31,7 +31,7 @@
     <BR>
         
     <div class="akirame-tweets">
-      <p class="btn-sm btn-info">new_Akirame</p>
+      <p class="btn-sm btn-info">Akirameters</p>
     　　<% @micropost_all.each do |m| %>
 　　　　　<div class="field_content">
 　　　　　  <p class="akirame-timeline"><%= m.content %></p>
@@ -40,7 +40,7 @@
 　　　　　  費やした時間：<%= m.past_time %>
 　　　　　  <%= m.created_at %>
 　　　　　</div>
-　　　　　<hr/>
+　　　　　<hr clann="hr-tweet">
 　　　　<% end %>
   　</div>
   　<BR>
