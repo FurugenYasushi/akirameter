@@ -1,7 +1,7 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="animsition">
-    <span class="tweet-label">アキラメたい事</span>
+    <span class="tweet-label">アキラメたこと、</span>
     <%= f.text_area :content,class: 'akirame-tweets-form' ,placeholder: "1000文字以内" %>
     
     <label class="radio-inline tweet-label">
