@@ -23,10 +23,7 @@ section {
 textarea {
   resize: vertical;
 }
-p{
-  text-size: 14px;
-  color: #fff;
-}
+
 .center {
   text-align: center;
 }
@@ -75,6 +72,12 @@ h3 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+
+}
+
+.explain{
+  font-size: 16px;
+  color: #fff;
 }
 
 /* header */
