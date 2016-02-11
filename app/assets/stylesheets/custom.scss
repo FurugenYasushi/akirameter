@@ -32,10 +32,10 @@ textarea {
   margin-bottom: 10px;
 }
 
-a:link { color: #ff8000; }
-a:visited { color: #ff8000; }
-a:hover { color: #ff8000; }
-a:active { color: #ff8000; }
+a:link { color: #fff888; }
+a:visited { color: #fff888; }
+a:hover { color: #fff888; }
+a:active { color: #fff888; }
 
 /* typography */
 
@@ -86,7 +86,9 @@ p {
 /* header */
 
 #header {
-    opacity: 0.85;
+  background-color: rgba(0,0,0,0.0);
+  border: 0;
+  height: 0px;
 }
 
 #logo {
@@ -277,4 +279,20 @@ span.picture {
 
 .tweet-label{
   color: #f5fffa; 
+}
+
+.twitter_user_image{
+  padding: -10px;
+  margin:10px;
+}
+
+
+.navber-text{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown-toggle{
+  /*text-decoration: none;*/
+
 }

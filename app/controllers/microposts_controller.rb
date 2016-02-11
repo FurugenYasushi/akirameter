@@ -1,17 +1,13 @@
 class MicropostsController < ApplicationController
-#  before_action :logged_in_user, only: [:create]
+ #before_action :logged_in_user, only: [:create]
 
   def create
-        if logged_in?
-       @micropost = current_user.microposts.build(micropost_params)
-        else
-          @micropost = Micropost.new(micropost_params)
-        end
-    
+ 
+    @micropost = Micropost.new(micropost_params)
     
     if @micropost.save
       #render 'static_pages/done'
-      flash[:success] = "お疲れ様でした！!　あなたの次のチャンスへの扉が今開きました！ May the force wiil be with you!!"
+      flash[:success] = "お疲れ様でした！!　あなたの次のチャンスへの扉が今開きました！!"
       redirect_to root_url
     else
       #@feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
@@ -29,7 +25,8 @@ class MicropostsController < ApplicationController
   end
   
   def new
-  @micropost = Micropost.new
+   @micropost = Micropost.new
+   @user = current_user
   end
   
   private
