@@ -6,11 +6,16 @@
 body {
   padding-top: 60px;
   background-image: image-url("ocean1.jpg");
-  background-color: #000000;
-  background-position: top center;
-  background-size: contain;
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+  /* 画像をタイル状に繰り返し表示しない */
   background-repeat: no-repeat;
-  background-attachment:fixed;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
   font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Verdana,'ＭＳ Ｐゴシック','sans-serif';
 }
 
@@ -32,10 +37,10 @@ textarea {
   margin-bottom: 10px;
 }
 
-a:link { color: #fff888; }
-a:visited { color: #fff888; }
-a:hover { color: #fff888; }
-a:active { color: #fff888; }
+a:link { color: #ff8000; }
+a:visited { color: #ff8000; }
+a:hover { color: #ff8000; }
+a:active { color: #ff8000; }
 
 /* typography */
 
@@ -44,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
@@ -107,9 +112,11 @@ p {
 }
 
 #logo-home{
+ border-radius: 10px;
  outline: solid 1px #fff;
- padding: 20px;
+ padding: 15px;
  background-color: rgba(0,0,0,0.1);
+ 
 }
 
 /* mixins, variables, etc. */
@@ -242,11 +249,12 @@ span.picture {
 
 /*akirame-tweets*/
 .akirame-tweets{
-  background-color: rgba( 255, 255, 255, 0.85); 
-  border-radius: 10px;
+  background-color: rgba( 0, 0, 0,0.1); 
+  border-radius: 5px;
   color: #000000; 
   padding: 20px;
   font-size: 14px;
+  margin: 0 auto; 
 }
 
 #akirameter{
@@ -256,13 +264,14 @@ span.picture {
 
 .akirame-tweets-form{
   background-color: rgba( 255, 255, 255, 1 ); 
-  border-radius: 10px;
+  border-radius: 1px;
   color: #000000; 
   padding: 5px 0px 0px 15px;
 }
 
 .akirame-timeline{
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "Meiryo UI","メイリオ";
 }
 
 .data-label{
@@ -271,10 +280,21 @@ span.picture {
 
 }
 
-.field_content{
+.field_contents{
+  background-color: rgba(255,255,255,0.8);
   text-align: left;
-  padding: 0px 0px 0px 15px;
+  margin: 1px;
+  border-radius: 2px;
+  padding: 10px 10px 10px 10px;
   font-size: 12px;
+  
+  float: left;
+  /*半角文字列を改行する（日本仕様）*/
+  word-break: break-all;
+  .info{
+    text-align: right;
+  }
+  
 }
 
 .tweet-label{
@@ -292,7 +312,4 @@ span.picture {
   text-decoration: none;
 }
 
-.dropdown-toggle{
-  /*text-decoration: none;*/
 
-}

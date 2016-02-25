@@ -1,6 +1,6 @@
 <div class="row">
- <div class="col-md-8 col-md-offset-2">
-  <div class="center">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="center">
     <h1 id="logo-home">A★Kirameter</h1>
     <h3>〜アキラメをキラメキ★に〜</h3>
     <p class="explain"> 今諦めたこと、今までに諦めたこと、これから諦めること</p>
@@ -13,21 +13,21 @@
       <%= link_to "アキラメル！", new_micropost_path, class: "btn btn-lg btn-default" %>
     <BR>
     <BR>
-        
-    <div class="akirame-tweets">
-      <p class="btn-sm btn-info">Akirameters</p>
-    　　<% @micropost_all.each do |m| %>
-　　　　　<div class="field_content">
-　　　　　  <p class="akirame-timeline"><%= m.content %></p>
-            性別：<%= m.seibetsu %>
-　　　　　  年代：<%= m.age %>
-　　　　　  費やした時間：<%= m.past_time %>
-　　　　　  <%= m.created_at %>
-　　　　　</div>
-　　　　　<hr clann="hr-tweet">
-　　　　<% end %>
-  　</div>
-  　<BR>
+    </div>
+  </div>
+    <div class="col-md-10 col-md-offset-1 akirame-tweets">
+      <% @micropost_all.each do |m| %>
+        <div class="field_contents">
+            <p class="akirame-timeline"><%= m.content %>
+            </p>
+            <p class="info">
+            <%= m.age %>:<%= m.seibetsu %><br>
+            費やした時間:<%= m.past_time %><br>
+            <%= m.created_at %><br>
+            </p>
+        </div>
+      <% end %>
+    </div>
   　<BR>
   　<!---
     <%= link_to "Sign up now!", microposts_path, class: "btn btn-xs btn-primary" %>
