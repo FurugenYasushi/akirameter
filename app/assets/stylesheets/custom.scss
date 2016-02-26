@@ -22,8 +22,8 @@ body {
 section {
   overflow: auto;
 }
-.hr-twwet{
-  background-color: #5bc0de;
+hr{
+  border-top: 2px solid #ffffff;
 }
 textarea {
   resize: vertical;
@@ -38,9 +38,16 @@ textarea {
 }
 
 a:link { color: #ff8000; }
+
 a:visited { color: #ff8000; }
 a:hover { color: #ff8000; }
 a:active { color: #ff8000; }
+
+a.akirame_btn{ color: #ffffff; text-decoration: none; }
+a:link.akirame_btn{ color: #ffffff; }
+a:link.akirame_btn{ color: #ffffff; }
+a:link.akirame_btn{ color: #ffffff; }
+
 
 /* typography */
 
@@ -51,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em;
   letter-spacing: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-align: center;
   color: #fff;
 }
@@ -112,10 +119,12 @@ p {
 }
 
 #logo-home{
+ font-size: 3.7em;
+ font-family: 'Merriweather', serif;
  border-radius: 10px;
- outline: solid 1px #fff;
- padding: 15px;
- background-color: rgba(0,0,0,0.1);
+ /*outline: solid 1px #fff;*/
+ padding: 0px;
+ background-color: rgba(0,0,0,0);
  
 }
 
@@ -252,7 +261,7 @@ span.picture {
   background-color: rgba( 0, 0, 0,0.1); 
   border-radius: 5px;
   color: #000000; 
-  padding: 20px;
+  padding: 10px;
   font-size: 14px;
   margin: 0 auto; 
 }
@@ -269,10 +278,6 @@ span.picture {
   padding: 5px 0px 0px 15px;
 }
 
-.akirame-timeline{
-  font-size: 16px;
-  font-family: "Meiryo UI","メイリオ";
-}
 
 .data-label{
   font-size: 12px;
@@ -283,19 +288,28 @@ span.picture {
 .field_contents{
   background-color: rgba(255,255,255,0.8);
   text-align: left;
-  margin: 1px;
-  border-radius: 2px;
-  padding: 10px 10px 10px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  padding: 1px 1px 1px 1px;
   font-size: 12px;
-  
-  float: left;
   /*半角文字列を改行する（日本仕様）*/
   word-break: break-all;
-  .info{
-    text-align: right;
-  }
-  
+
 }
+
+.akirame{
+  font-size: 14px;
+  font-family: "Meiryo UI","メイリオ";
+  padding: 15px 20px 15px 5px;
+  background-color: rgba(255,255,252,0.7);
+}
+
+
+.info{
+    background-color: rgba(209,196,233,0.5);
+    text-align: right;
+}
+  
 
 .tweet-label{
   color: #f5fffa; 
@@ -312,4 +326,13 @@ span.picture {
   text-decoration: none;
 }
 
+.akirame_btn{
+  font-size: 20px;
+  font-family: 'Meiryo UI','メイリオ';
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  background-color: rgb(236,64,122);
+}
 
