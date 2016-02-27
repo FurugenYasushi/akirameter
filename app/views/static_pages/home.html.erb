@@ -28,8 +28,9 @@
             <%= m.content %>
           </div>
           <div class="info">
-            <%= m.age %>:<%= m.seibetsu %>
-            費やした時間:<%= m.past_time %>
+            <% if m.age.present? %><%= m.age %>:<% end %>
+            <% if m.seibetsu.present? %><%= m.seibetsu %><% end %>
+            <% if m.past_time.present? %>費やした時間:<%= m.past_time %><% end %>
             <%= m.created_at %>
           </div>
         </div>
@@ -41,6 +42,8 @@
      --->
     </div>
   </div>
+  
 </div>
 2016---akirameter---
+
 
