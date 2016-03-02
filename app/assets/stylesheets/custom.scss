@@ -264,6 +264,7 @@ span.picture {
   padding: 10px;
   font-size: 14px;
   margin: 0 auto; 
+  clear: both;
 }
 
 #akirameter{
@@ -282,14 +283,13 @@ span.picture {
 .data-label{
   font-size: 12px;
   color: #fff; 
-
 }
 
 .field_contents{
   background-color: rgba(255,255,255,0.8);
   text-align: left;
-  margin: 5px;
-  border-radius: 3px;
+  margin: 10px;
+  border-radius: 10px;
   padding: 1px 1px 1px 1px;
   font-size: 12px;
   /*半角文字列を改行する（日本仕様）*/
@@ -334,5 +334,15 @@ span.picture {
   border: 1px solid #ffffff;
   border-radius: 1px;
   background-color: rgb(236,64,122);
+  /*clear: both;*/
 }
 
+.charts_group{
+  /*float: left;*/
+}
+
+.akirame_counter{
+  border: #ffffff  1px;
+  margin: 10px;
+  padding: 10px;
+}
