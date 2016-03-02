@@ -18,17 +18,12 @@
       </div>
         <div class="col-md-4 col-md-offset-2 charts_group"><%= pie_chart Micropost.group(:age).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none'} %></div>
         <div class="col-md-4 charts_group"><%= pie_chart Micropost.group(:seibetsu).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#b71c1c','#0D47A1']}%></div>
-      <BR>
-      <BR>
-      <BR>
+     
       <BR>
       <BR>
       <div class="">
       <%= link_to "アキラメル", new_micropost_path, class: "col-md-4 col-md-offset-4 akirame_btn" %>
       </div>
-      <BR>
-      <BR>
-      <BR>
       <BR>
       <BR>
       <BR>
