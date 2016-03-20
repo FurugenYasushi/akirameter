@@ -3,7 +3,7 @@
   <BR>
   <div class="col-md-8 col-md-offset-2">
     <div class="center">
-      <h1 id="logo-home">A★Kirameter</h1>
+      <h1 id="logo-home" class="animated fadeInDown">A★Kirameter</h1>
       <hr>
       <h3>〜アキラメをキラメキ★に〜</h3>
       <p class="explain"> 今諦めたこと、今までに諦めたこと、これから諦めること</p>
@@ -27,6 +27,9 @@
       <BR>
       <BR>
       <BR>
+      <div class="share_bottun">
+        <%= render_shareable :buttons=> ['twitter', 'facebook'] %>
+      </div>
       <div class="akirame-tweets">
         <% @micropost_all.each do |m| %>
         <div class="field_contents">
