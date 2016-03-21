@@ -9,38 +9,44 @@
       <p class="explain"> 今諦めたこと、今までに諦めたこと、これから諦めること</p>
       <br>
       <div class="akirame_counter">
-        <span class="data-label">Akirame.ALL</span><br>
+        <span class="data-label">Akirame.ALL</span>
+        <br>
         <span id="akirameter">
         <%= pluralize(Micropost.count, "") %>
         <!--<%= Micropost.where(seibetsu: '男').count %>
         <%= Micropost.where(seibetsu: '女').count %>-->
         </span>
       </div>
-        <div class="col-md-4 col-md-offset-2 charts_group"><%= pie_chart Micropost.group(:age).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none'} %></div>
-        <div class="col-md-4 charts_group"><%= pie_chart Micropost.group(:seibetsu).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#b71c1c','#0D47A1']}%></div>
+      <div class="col-md-4 charts_group"><%= pie_chart Micropost.group(:age).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none'} %></div>
+      <div class="col-md-4 charts_group"><%= pie_chart Micropost.group(:genre).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#b71c1c','#0D47A1']}%></div>
+      <div class="col-md-4 charts_group"><%= pie_chart Micropost.group(:seibetsu).count ,library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#b71c1c','#0D47A1']}%></div>
      
       <BR>
       <BR>
-      <div class="">
-      <%= link_to "アキラメル", new_micropost_path, class: "col-md-4 col-md-offset-4 akirame_btn" %>
+      <div class="akirame-form">
+        <%= link_to "アキラメル", new_micropost_path, class: "col-md-8 col-md-offset-2" %>
+        <div class="col-md-8 col-md-offset-2 akirame-form" >
+          <%= render 'shared/akirame_tweet_form' %>
+        </div>
       </div>
-      <BR>
-      <BR>
-      <BR>
-      <div class="share_bottun">
-        <%= render_shareable :buttons=> ['twitter', 'facebook'] %>
+      
+      <div style="display:inline-flex" class="share_bottun">
+        <%= render_shareable :buttons=> ['twitter'] %>
+        <%= render_shareable :buttons=> ['facebook'] %>
       </div>
+      
       <div class="akirame-tweets">
         <% @micropost_all.each do |m| %>
         <div class="field_contents">
           <div class="akirame">
             <%= m.content %>
           </div>
-          <div class="info">
-            <% if m.age.present? %><%= m.age %>:<% end %>
-            <% if m.seibetsu.present? %><%= m.seibetsu %><% end %>
-            <% if m.past_time.present? %>費やした時間:<%= m.past_time %><% end %>
-            <%= m.created_at %>
+          <div class="akirame_info">
+            <% if m.age.present? %><span class="age_info"><%= m.age %></span><% end %>
+            <% if m.seibetsu.present? %><span class="seibetsu_info"><%= m.seibetsu %></span><% end %>
+            <% if m.genre.present? %><span class="genre_info"><%= m.genre %></span><% end %>
+            <% if m.past_time.present? %><span class="past_time_info"><%= m.past_time %></span><% end %>
+            <span class="created_info"><%= m.created_at %></span>
           </div>
         </div>
         <% end %>

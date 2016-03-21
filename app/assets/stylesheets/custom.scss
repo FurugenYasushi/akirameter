@@ -259,7 +259,6 @@ span.picture {
 /*akirame-tweets*/
 .akirame-tweets{
   background-color: rgba( 0, 0, 0,0.1); 
-  border-radius: 5px;
   color: #000000; 
   padding: 10px;
   font-size: 14px;
@@ -270,11 +269,11 @@ span.picture {
 #akirameter{
   font-size: 45px;
   color: #fff; 
+  padding: 0px;
 }
 
 .akirame-tweets-form{
   background-color: rgba( 255, 255, 255, 1 ); 
-  border-radius: 1px;
   color: #000000; 
   padding: 5px 0px 0px 15px;
 }
@@ -289,7 +288,6 @@ span.picture {
   background-color: rgba(255,255,255,0.8);
   text-align: left;
   margin: 10px;
-  border-radius: 10px;
   padding: 1px 1px 1px 1px;
   font-size: 12px;
   /*半角文字列を改行する（日本仕様）*/
@@ -305,19 +303,20 @@ span.picture {
 }
 
 
-.info{
-    background-color: rgba(209,196,233,0.5);
-    text-align: right;
-}
-  
-
 .tweet-label{
-  color: #f5fffa; 
+  padding-left: 20px;
+  color: #f5fffa;
+}
+
+.tweet-info{
+  color: #000000;
+  white-space: nowrap;
+  margin: 15px;
 }
 
 .twitter_user_image{
   padding: -10px;
-  margin:10px;
+  margin: 10px;
 }
 
 
@@ -343,10 +342,55 @@ span.picture {
 
 .akirame_counter{
   border: #ffffff  1px;
-  margin: 10px;
-  padding: 10px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .share_bottun{
   clear: both;
+  margin: 15px;
+  padding-right: 15px; 
+}
+
+.akirame_info{
+    background-color: rgba(255,255,255,0.5);
+    text-align: right;
+    padding: 3px;
+    color: rgb(0,0,0);
+}
+
+.age_info{
+  background-color: rgb(102,187,106);
+  color: rgb(255,255,255);
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.seibetsu_info{
+  background-color: rgb(126,87,194);
+  color: rgb(255,255,255);
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.genre_info{
+  background-color: rgb(121,85,72);
+  color: rgb(255,255,255);
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.past_time_info{
+  background-color: rgb(120,144,156);
+  color: rgb(255,255,255);
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.created_info{
+  text-align: right;
+}
+
+.akirame-form{
+  background-color: rgba(120,144,156,0.5);  
 }

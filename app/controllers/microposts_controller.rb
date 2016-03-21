@@ -31,6 +31,6 @@ class MicropostsController < ApplicationController
   
   private
   def micropost_params
-    params.require(:micropost).permit(:content,:seibetsu,:age,:past_time)
+    params.require(:micropost).permit(:content,:seibetsu,:age,:past_time,:genre)
   end
 end

@@ -1,25 +1,34 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="animsition">
-    <span class="tweet-label">アキラメたこと、</span>
+  <div class="">
+    <span class="tweet-label">アキラメたいこと、アキラメたこと</span>
     <%= f.text_area :content,class: 'akirame-tweets-form' ,placeholder: "1000文字以内" %>
     
-    <label class="radio-inline tweet-label">
-    <%= f.radio_button :seibetsu,"男",class:'',id:"inlineRadio1" %>　男
-    </label>
-    <label class="radio-inline tweet-label">
-    <%= f.radio_button :seibetsu,"女",class:'',id:"inlineRadio2" %>　女
-    </label>
-    <br>
-    <br>
-    <% options = ["","10代","20代","30代","40代","50代","60代","70代","80代","90代","100歳以上"] %>
-    <span class="tweet-label">年代</span>
-    <%= f.select :age, options ,class: 'akirame-tweets-form' %>
-    <% options = ["","一瞬","1日","3日","１週間","1ヶ月","3ヶ月","6ヶ月","1年","2年","3年","4年","5年","6年","7年","8年","9年","10年","10年以上","15年以上","20年以上"] %>
-    <span class="tweet-label">費やした時間</span><%= f.select :past_time, options ,class: 'akirame-tweets-form' %>
+    
+
+      
+      <div class="tweet_info">
+      <label class="radio-inline">
+      <%= f.radio_button :seibetsu,"男",class:'tweet-label',id:"inlineRadio1" %>　男
+      </label>
+      <label class="radio-inline">
+      <%= f.radio_button :seibetsu,"女",class:'tweet-label',id:"inlineRadio2" %>　女
+      </label>
+      </div>
+     <div style="display:inline-flex" class="tweet-info">
+      <% options = ["","10代","20代","30代","40代","50代","60代","70代","80代","90代","100歳以上"] %>
+      <span class="tweet-label">年代</span>
+      <%= f.select :age, options ,class: 'tweet-info' %>
+      <% options = ["夢","目標","恋愛","人","仕事","生活","ちょっとしたこと","その他"] %>
+      <span class="tweet-label">ジャンル</span>
+      <%= f.select :genre, options ,class: 'tweet-info' %>
+      <% options = ["","一瞬","1日","3日","１週間","1ヶ月","3ヶ月","6ヶ月","1年","2年","3年","4年","5年","6年","7年","8年","9年","10年","10年以上","15年以上","20年以上"] %>
+      <span class="tweet-label">費やした時間</span>
+      <%= f.select :past_time, options ,class: 'tweet-info' %>
+    </div>
   </div>
   <br>
   <div  class="">
-  <%= f.submit "アキラメる！", class: "btn btn-primary" %>
+  <%= f.submit "アキラメる！", class: "akirame_btn" %>
   </div>
 <% end %>
