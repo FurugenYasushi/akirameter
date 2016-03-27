@@ -6,4 +6,5 @@ class Micropost < ActiveRecord::Base
   validates :age, presence: true
   validates :seibetsu, presence: true
   validates :genre, presence: true
+  validates :past_time, presence: true
 end

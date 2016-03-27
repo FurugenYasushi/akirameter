@@ -1,9 +1,7 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
-    <div class="alert alert-danger">
-      下記<%= pluralize(object.errors.count, "箇所") %>を確認シテください.
-    </div>
-    <ul>
+    <!--<div class="alert alert-danger">-->
+    <ul><span id="error_explanation">下記を確認シテください.</span>
     <% object.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>

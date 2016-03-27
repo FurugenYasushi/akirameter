@@ -154,7 +154,8 @@ input {
 #error_explanation {
   color: red;
   ul {
-    color: red;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
     margin: 0 0 10px 0;
   }
 }
@@ -305,7 +306,6 @@ span.picture {
 .tweet-info{
   color: #000000;
   white-space: nowrap;
-  margin: 15px;
 }
 
 .twitter_user_image{
