@@ -43,7 +43,7 @@ a:visited { color: #ff8000; }
 a:hover { color: #ff8000; }
 a:active { color: #ff8000; }
 
-a.akirame_btn{ color: #ffffff; text-decoration: none; }
+
 a:link.akirame_btn{ color: #ffffff; }
 a:link.akirame_btn{ color: #ffffff; }
 a:link.akirame_btn{ color: #ffffff; }
@@ -155,7 +155,7 @@ input {
   color: red;
   ul {
     color: red;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
   }
 }
 
@@ -319,16 +319,7 @@ span.picture {
   text-decoration: none;
 }
 
-.akirame_btn{
-  font-size: 20px;
-  font-family: 'Meiryo UI','メイリオ';
-  color: #fff;
-  padding: 5px;
-  border: 1px solid #ffffff;
-  border-radius: 1px;
-  background-color: rgb(236,64,122);
-  /*clear: both;*/
-}
+
 
 .charts-group{
   /*float: left;*/
@@ -344,7 +335,7 @@ span.picture {
   padding: 0px;
 }
 
-.share_bottun{
+.share-btn{
   clear: both;
   margin: 15px;
   padding-right: 15px; 
@@ -441,4 +432,78 @@ input[type="radio"]:checked + .tweet-label {
   padding: 5px 10px 5px 10px;
   width: 100px;
   margin: 10px;
+}
+
+/*諦めボタン用*/
+.akirame_btn{
+  font-size: 20px;
+  font-family: 'Meiryo UI','メイリオ';
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  background-color: rgb(236,64,122);
+  /*clear: both;*/
+}
+
+a.akirame_btn{ color: #ffffff; text-decoration: none; }
+.akirame_btn {
+	position: relative;
+	color: #fff;
+	line-height: 25px;
+	/*
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	
+	box-sizing: content-box;
+	*/
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0px 1px 0px #f56778;
+}
+.akirame_btn,
+.akirame_btn:hover {
+	border-bottom: 4px solid #cb5462;
+	background-color: #f56778;
+	background-image: -webkit-linear-gradient(top, #D81B60, #f56778);
+	background-image: linear-gradient(to bottom, #D81B60, #f56778);
+	box-shadow: inset 1px 1px 0 #fbc1d0;
+
+}
+.akirame_btn::before,
+.akirame_btn::after {
+	bottom: -1px;
+	left: -1px;
+	height: 20px;
+	border: 1px solid #ee8090;
+	border-bottom: 1px solid #b84d5a;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-transition: none;
+	transition: none;
+}
+.akirame_btn::before {
+	height: 48px;
+	bottom: -4px;
+	border-top: 0;
+	box-shadow: 0 1px 1px 0px #bfbfbf;
+}
+.akirame_btn:hover {
+	background: #f56778;
+	background-image: -webkit-linear-gradient(top, #f56778, #D81B60);
+	background-image: linear-gradient(to bottom, #f56778, #D81B60);
+	color: #fff;
+	text-shadow: 0px 1px 0px #f9a0ad;
+	font-size: 30px;
+}
+.akirame_btn:active {
+	bottom: -4px;
+	margin-bottom: 4px;
+	border: none;
+	box-shadow: 1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, .3);
+}
+.akirame_btn:active::before,
+.akirame_btn:active::after {
+	border: none;
+	box-shadow: none;
 }

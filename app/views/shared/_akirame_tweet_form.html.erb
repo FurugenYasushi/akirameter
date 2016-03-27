@@ -1,9 +1,12 @@
 <%= form_for(@micropost) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+  <BR>
+  <div>
+    <%= render 'shared/error_messages', object: f.object %>
+  </div>
   <div class="">
     <br>
     <%= f.text_area :content,class: 'akirame-tweet-form' ,placeholder: "アキラメたいこと、アキラメたことをここに書いてください" %>
-      <div class="tweet_info">
+      <div style="display:inline-flex" class="tweet_info">
    
         <%= f.radio_button :seibetsu,"男",class:'tweet-label',id:"inlineRadio1" %>　
         <label class="radio-inline tweet-label male-label" for="inlineRadio1">男</label>

@@ -15,17 +15,16 @@
         <%= pluralize(Micropost.count, "") %>
         </span>
       </div>
-      
-      
+
       <div class="col-md-4"><%= pie_chart Micropost.group(:age).count ,height: "200px",library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',height: '180'} %></div>
       <div class="col-md-4"><%= pie_chart Micropost.group(:genre).count ,height: "200px",library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',height: '180'}%></div>
       <div class="col-md-4"><%= pie_chart Micropost.group(:seibetsu).count ,height: "200px",library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#F48FB1','#b71c1c','#0D47A1'],height: '180'}%></div>
-      
+     
       <div class="col-md-8 col-md-offset-2 akirame-form">
         <%= render 'shared/akirame_tweet_form' %>
       </div>
       
-      <div style="display:inline-flex" class="share_bottun">
+      <div style="display:inline-flex" class="share-btn">
         <%= render_shareable :buttons=> ['twitter'] %>
         <%= render_shareable :buttons=> ['facebook'] %>
       </div>
