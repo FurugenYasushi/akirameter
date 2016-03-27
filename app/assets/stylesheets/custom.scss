@@ -270,14 +270,8 @@ span.picture {
   font-size: 45px;
   color: #fff; 
   padding: 0px;
+  margin: 0px;
 }
-
-.akirame-tweets-form{
-  background-color: rgba( 255, 255, 255, 1 ); 
-  color: #000000; 
-  padding: 5px 0px 0px 15px;
-}
-
 
 .data-label{
   font-size: 12px;
@@ -336,11 +330,15 @@ span.picture {
   /*clear: both;*/
 }
 
-.charts_group{
+.charts-group{
   /*float: left;*/
 }
 
-.akirame_counter{
+.akirame-form{
+  background-color: rgba( 0, 0, 0,0.2); 
+}
+
+.akirame-counter{
   border: #ffffff  1px;
   margin: 0px;
   padding: 0px;
@@ -391,6 +389,56 @@ span.picture {
   text-align: right;
 }
 
-.akirame-form{
-  background-color: rgba(120,144,156,0.5);  
+
+/*#B0BEC5','#b71c1c','#0D47A1'*/
+
+/* ラジオボタンは非表示にする */
+
+input[type=radio] {
+  display: none; 
+}
+
+/* チェックされた時のスタイル */
+
+input[type="radio"]:checked + .tweet-label {
+  color: #FFEE58; 
+  border:2px solid #FFEE58;
+  text-decoration: underline;
+}
+/* マウスオーバーしたときのスタイル */
+.male-label:hover {
+  background-color: #1976D2; 
+}
+
+.female-label:hover {
+  background-color: #e53935; 
+}
+
+.malefemale-label:hover {
+  background-color: #CFD8DC; 
+}
+
+
+.male-label{
+  background-color: #0D47A1;
+  test-align: center;
+  padding: 5px 10px 5px 10px;
+  width: 100px;
+  margin: 10px;
+}
+
+.female-label{
+  background-color: #b71c1c;
+  test-align: center;
+  padding: 5px 10px 5px 10px;
+  width: 100px;
+  margin: 10px;
+}
+
+.malefemale-label{
+  background-color: #B0BEC5;
+  test-align: center;
+  padding: 5px 10px 5px 10px;
+  width: 100px;
+  margin: 10px;
 }
