@@ -394,7 +394,8 @@ input[type=radio] {
 input[type="radio"]:checked + .tweet-label {
   color: #FFEE58; 
   border:2px solid #FFEE58;
-  text-decoration: underline;
+  font-size: 20px;
+  padding: 0pX;
 }
 /* マウスオーバーしたときのスタイル */
 .male-label:hover {
@@ -456,8 +457,8 @@ a.akirame_btn{ color: #ffffff; text-decoration: none; }
 	
 	box-sizing: content-box;
 	*/
-	-webkit-transition: none;
-	transition: none;
+	-webkit-transition: all .3s;
+	transition: all .3s;
 	text-shadow: 0px 1px 0px #f56778;
 }
 .akirame_btn,
@@ -479,8 +480,8 @@ a.akirame_btn{ color: #ffffff; text-decoration: none; }
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-	-webkit-transition: none;
-	transition: none;
+  -webkit-transition: all .3s;
+	transition: all .3s;
 }
 .akirame_btn::before {
 	height: 48px;
@@ -494,7 +495,8 @@ a.akirame_btn{ color: #ffffff; text-decoration: none; }
 	background-image: linear-gradient(to bottom, #f56778, #D81B60);
 	color: #fff;
 	text-shadow: 0px 1px 0px #f9a0ad;
-	font-size: 30px;
+	font-size: 22px;
+	letter-spacing: 5px;
 }
 .akirame_btn:active {
 	bottom: -4px;
