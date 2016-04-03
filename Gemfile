@@ -45,7 +45,12 @@ gem "chartkick"
 #日付グループ用
 gem 'groupdate'
 
+#シェアボタン
 gem 'shareable'
+
+#javascriptを動かす
+gem 'jquery-turbolinks'
+
 
 #pagenation
 gem 'will_paginate',           '3.0.7'
