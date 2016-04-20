@@ -2,7 +2,7 @@
   <BR>
   <div class="col-md-8 col-md-offset-2">
     <div class="center">
-      <h1 id="logo-home" class="animated fadeInDown">A★Kirameter</h1>
+      <h1 id="logo-home" class="">A★Kirameter</h1>
       <hr>
       <h3>〜アキラメをキラメキ★に〜</h3>
       <p class="explain"> 今諦めたこと、今までに諦めたこと、これから諦めること</p>
@@ -21,7 +21,8 @@
       <div class="col-md-4"><%= pie_chart Micropost.group(:seibetsu).count ,height: "200px",library: {backgroundColor: 'transparent',pieSliceText: 'label',legend: 'none',colors:['#B0BEC5','#F48FB1','#b71c1c','#0D47A1'],height: '180'}%></div>
      
       <div class="col-md-8 col-md-offset-2 akirame-form">
-        <%= render 'shared/akirame_tweet_form' %>
+          <%= render 'shared/akirame_tweet_form' %>
+        <p><a id="modal-open" class="akirame_btn">アキラメる！</a></p>
       </div>
       
       <div style="display:inline-flex" class="share-btn">
@@ -53,11 +54,21 @@
     </div>
   </div>
   
-  <div id="modal-content">
-	<p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
-	<p><a id="modal-close" class="button-link">閉じる</a></p>
+  <!--モーダル画面1内-->
+  <div id="modal-content1" class="col-md-6 col-md-offset-2">
+	  <p class="">本当に諦めてもいいですか？</p>
+	  <p class="non-deco"><a id="modal-close">ちょっと考えます</a></p>
+	  <input type="button" value="はい、諦めます！" id="modal-submit" class="akirame_btn2">
   </div>
   
+  <!--モーダル画面2内-->
+
+  <div id="modal-content2" class="col-md-6 col-md-offset-2 animsition">
+	  <p>お疲れ様でした！<br>また次のキラメキ探しましょう！</p>
+  
+  </div>
+  <canvas id="canvas">
+  </canvas>
 </div>
 2016---akirameter---
 
